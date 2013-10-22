@@ -1,8 +1,6 @@
 jpgFiles = dir('Path');
 display(length(jpgFiles));
-for k = 404:length(jpgFiles)
-%numberofpixel [3 1];
-%for k = 1: 2
+for k = 1:length(jpgFiles)
     display(k);
     filename = jpgFiles(k).name;
     I = imread(filename);
