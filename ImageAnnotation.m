@@ -1,5 +1,6 @@
 jpgFiles = dir('Path');
 display(length(jpgFiles));
+
 for k = 1:length(jpgFiles)
     display(k);
     filename = jpgFiles(k).name;
@@ -27,12 +28,14 @@ display(scale);
 numPix = numPix(1:length(numPix));
 display(numPix);
 save('image_data.mat','numPix', 'scale');
+
 figure1 = figure;
 scatter(numPix, scale);
 xlabel('Number of Pixels');
 ylabel('Scale of Image');
 title('Number Of Pixels vs Scale Of Image');
 saveas(figure1,'NumberOfPixels_vs_ScaleOfImage');
+
 figure2 = figure;
 scatter(scale, numPix);
 ylabel('Number of Pixels');
